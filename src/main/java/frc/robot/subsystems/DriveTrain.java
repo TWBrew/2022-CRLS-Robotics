@@ -45,11 +45,11 @@ public class DriveTrain extends SubsystemBase {
     BR.set(ControlMode.PercentOutput, -rThrottle);
   }
 
-  public void doDrive() {
+  public void doDrive(double throttle, double twist, double speed) {
     if (arcade) {
-      arcadeDrive(stick1.getRawAxis(1), stick1.getTwist(), Math.max(0, 1-stick1.getRawAxis(3)));
+      arcadeDrive(throttle, twist, speed);
     } else {
-      tankDrive(stick1.getRawAxis(1), stick2.getRawAxis(1), Math.max(0, 1-stick1.getRawAxis(3)));
+      tankDrive(throttle, twist, speed);
     }
   }
 
