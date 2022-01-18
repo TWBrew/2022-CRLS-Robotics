@@ -7,7 +7,6 @@ package frc.robot;
 import edu.wpi.first.wpilibj.GenericHID;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.XboxController;
-import frc.robot.commands.Drive;
 import frc.robot.commands.DriveModeSwitch;
 import frc.robot.subsystems.DriveTrain;
 import frc.robot.subsystems.ExampleSubsystem;
@@ -25,7 +24,6 @@ public class RobotContainer {
   // The robot's subsystems and commands are defined here...
   private final DriveTrain m_DriveTrain = new DriveTrain();
 
-  private final Drive m_DriveCommand                 = new Drive(m_DriveTrain);
   private final DriveModeSwitch m_DriveSwitchCommand = new DriveModeSwitch(m_DriveTrain);
   private final Joystick joystick1                   = new Joystick(0);
 
